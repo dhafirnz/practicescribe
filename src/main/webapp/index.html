@@ -11,6 +11,8 @@
         <!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
@@ -66,6 +68,8 @@
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
         <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
         <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -153,4 +157,7 @@
     <script src="scripts/components/tracker/tracker.service.js"></script>
     <!-- endbuild -->
 </body>
+    <script>
+        $.material.init()
+    </script>
 </html>
