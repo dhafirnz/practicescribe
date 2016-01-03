@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "PracticeScribe",
+    "packageName": "nz.co.threepoints.ps.core",
+    "packageFolder": "nz/co/threepoints/ps/core",
+    "authenticationType": "xauth",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "useSass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "f2508367766b4943e9451e4099c4650bd22b7f47",
+    "testFrameworks": [
+      "cucumber"
+    ]
+  }
+}
