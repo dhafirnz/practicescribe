@@ -1,0 +1,110 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myAddressLabel" translate="practiceScribeApp.address.home.createOrEditLabel">Create or edit a Address</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="address.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="practiceScribeApp.address.streetNum" for="field_streetNum">StreetNum</label>
+            <input type="text" class="form-control" name="streetNum" id="field_streetNum"
+                    ng-model="address.streetNum"
+                    ng-maxlength="20" />
+            <div ng-show="editForm.streetNum.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.streetNum.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="practiceScribeApp.address.streetName" for="field_streetName">StreetName</label>
+            <input type="text" class="form-control" name="streetName" id="field_streetName"
+                    ng-model="address.streetName"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.streetName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.streetName.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="practiceScribeApp.address.poBoxNum" for="field_poBoxNum">PoBoxNum</label>
+            <input type="text" class="form-control" name="poBoxNum" id="field_poBoxNum"
+                    ng-model="address.poBoxNum"
+                    ng-maxlength="20" />
+            <div ng-show="editForm.poBoxNum.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.poBoxNum.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="practiceScribeApp.address.suburb" for="field_suburb">Suburb</label>
+            <input type="text" class="form-control" name="suburb" id="field_suburb"
+                    ng-model="address.suburb"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.suburb.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.suburb.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="practiceScribeApp.address.town" for="field_town">Town</label>
+            <input type="text" class="form-control" name="town" id="field_town"
+                    ng-model="address.town"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.town.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.town.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="practiceScribeApp.address.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="address.city"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.city.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.city.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="practiceScribeApp.address.country" for="field_country">Country</label>
+            <input type="text" class="form-control" name="country" id="field_country"
+                    ng-model="address.country"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.country.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.country.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

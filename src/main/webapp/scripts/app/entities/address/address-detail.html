@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="practiceScribeApp.address.detail.title">Address</span> {{address.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="practiceScribeApp.address.streetNum">StreetNum</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{address.streetNum}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="practiceScribeApp.address.streetName">StreetName</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{address.streetName}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="practiceScribeApp.address.poBoxNum">PoBoxNum</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{address.poBoxNum}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="practiceScribeApp.address.suburb">Suburb</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{address.suburb}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="practiceScribeApp.address.town">Town</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{address.town}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="practiceScribeApp.address.city">City</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{address.city}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="practiceScribeApp.address.country">Country</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{address.country}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
