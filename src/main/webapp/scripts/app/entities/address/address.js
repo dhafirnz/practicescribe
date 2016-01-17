@@ -67,6 +67,8 @@ angular.module('practiceScribeApp')
                                     suburb: null,
                                     town: null,
                                     city: null,
+                                    postcode: null,
+                                    state: null,
                                     country: null,
                                     id: null
                                 };

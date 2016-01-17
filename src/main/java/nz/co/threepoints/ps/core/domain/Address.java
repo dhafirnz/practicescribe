@@ -46,6 +46,14 @@ public class Address implements Serializable {
     @Column(name = "city", length = 50)
     private String city;
 
+    @Size(max = 6)
+    @Column(name = "postcode", length = 6)
+    private String postcode;
+
+    @Size(max = 50)
+    @Column(name = "state", length = 50)
+    private String state;
+
     @Size(max = 50)
     @Column(name = "country", length = 50)
     private String country;
@@ -114,6 +122,22 @@ public class Address implements Serializable {
         this.country = country;
     }
 
+    public String getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -141,6 +165,8 @@ public class Address implements Serializable {
             ", suburb='" + suburb + "'" +
             ", town='" + town + "'" +
             ", city='" + city + "'" +
+            ", postcode='" + postcode + "'" +
+            ", state='" + state + "'" +
             ", country='" + country + "'" +
             '}';
     }

@@ -74,13 +74,25 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label" translate="practiceScribeApp.address.city" for="field_city">City</label>
-            <input type="text" class="form-control" name="city" id="field_city"
-                    ng-model="address.city"
+            <label class="control-label" translate="practiceScribeApp.address.postcode" for="field_postcode">postcode</label>
+            <input type="text" class="form-control" name="postcode" id="field_postcode"
+                    ng-model="address.postcode"
                     ng-maxlength="50" />
-            <div ng-show="editForm.city.$invalid">
+            <div ng-show="editForm.postcode.$invalid">
                 <p class="help-block"
-                    ng-show="editForm.city.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    ng-show="editForm.postcode.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="practiceScribeApp.address.state" for="field_state">state</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                   ng-model="address.state"
+                   ng-maxlength="50" />
+            <div ng-show="editForm.state.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.state.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
                     This field cannot be longer than 50 characters.
                 </p>
             </div>

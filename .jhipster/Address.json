@@ -63,7 +63,26 @@
                 "maxlength"
             ],
             "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "postcode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "6"
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "state",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
         }
+
     ],
     "changelogDate": "20160104072929",
     "dto": "no",
