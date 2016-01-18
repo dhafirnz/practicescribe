@@ -19,14 +19,14 @@ spring:
         livereload:
             enabled: false # we use Grunt + BrowserSync for livereload
     datasource:
-        driver-class-name: org.h2.jdbcx.JdbcDataSource
-        url: jdbc:h2:file:./target/h2db/db/practicescribe;DB_CLOSE_DELAY=-1
+        driver-class-name: org.postgresql.ds.PGSimpleDataSource
+        url: jdbc:postgresql://localhost:5432/psdev
         name:
-        username: 
-        password:
+        username: psdev
+        password: password1
     jpa:
-        database-platform: nz.co.threepoints.ps.core.domain.util.FixedH2Dialect
-        database: H2
+        database-platform: nz.co.threepoints.ps.core.domain.util.FixedPostgreSQL82Dialect
+        database: POSTGRESQL
         show_sql: true
         properties:
             hibernate.cache.use_second_level_cache: true
@@ -36,11 +36,7 @@ spring:
     data:
         elasticsearch:
             cluster-name:
-            cluster-nodes:
-            properties:
-                path:
-                  logs: target/elasticsearch/log
-                  data: target/elasticsearch/data
+            cluster-nodes: localhost:9300
     mail:
         host: localhost
     messages:
