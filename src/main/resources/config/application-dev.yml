@@ -34,6 +34,7 @@ spring:
             hibernate.generate_statistics: true
             hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
     data:
+
        elasticsearch:
            cluster-name:
            cluster-nodes: localhost:9300

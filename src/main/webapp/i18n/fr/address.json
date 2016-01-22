@@ -21,6 +21,8 @@
             "suburb": "Suburb",
             "town": "Town",
             "city": "City",
+            "postcode": "Postcode",
+            "state": "State",
             "country": "Country"
         }
     }

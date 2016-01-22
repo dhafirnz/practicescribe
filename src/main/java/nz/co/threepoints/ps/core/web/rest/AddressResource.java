@@ -32,13 +32,13 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class AddressResource {
 
     private final Logger log = LoggerFactory.getLogger(AddressResource.class);
-        
+
     @Inject
     private AddressRepository addressRepository;
-    
+
     @Inject
     private AddressSearchRepository addressSearchRepository;
-    
+
     /**
      * POST  /addresss -> Create a new address.
      */
@@ -52,7 +52,7 @@ public class AddressResource {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("address", "idexists", "A new address cannot already have an ID")).body(null);
         }
         Address result = addressRepository.save(address);
-        addressSearchRepository.save(result);
+//        addressSearchRepository.save(result);
         return ResponseEntity.created(new URI("/api/addresss/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert("address", result.getId().toString()))
             .body(result);
@@ -71,7 +71,7 @@ public class AddressResource {
             return createAddress(address);
         }
         Address result = addressRepository.save(address);
-        addressSearchRepository.save(result);
+//        addressSearchRepository.save(result);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert("address", address.getId().toString()))
             .body(result);
@@ -87,7 +87,7 @@ public class AddressResource {
     public List<Address> getAllAddresss() {
         log.debug("REST request to get all Addresss");
         return addressRepository.findAll();
-            }
+    }
 
     /**
      * GET  /addresss/:id -> get the "id" address.
@@ -116,7 +116,7 @@ public class AddressResource {
     public ResponseEntity<Void> deleteAddress(@PathVariable Long id) {
         log.debug("REST request to delete Address : {}", id);
         addressRepository.delete(id);
-        addressSearchRepository.delete(id);
+//        addressSearchRepository.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert("address", id.toString())).build();
     }
 
@@ -124,14 +124,14 @@ public class AddressResource {
      * SEARCH  /_search/addresss/:query -> search for the address corresponding
      * to the query.
      */
-    @RequestMapping(value = "/_search/addresss/{query}",
-        method = RequestMethod.GET,
-        produces = MediaType.APPLICATION_JSON_VALUE)
-    @Timed
-    public List<Address> searchAddresss(@PathVariable String query) {
-        log.debug("REST request to search Addresss for query {}", query);
-        return StreamSupport
-            .stream(addressSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
-    }
+//    @RequestMapping(value = "/_search/addresss/{query}",
+//        method = RequestMethod.GET,
+//        produces = MediaType.APPLICATION_JSON_VALUE)
+//    @Timed
+//    public List<Address> searchAddresss(@PathVariable String query) {
+//        log.debug("REST request to search Addresss for query {}", query);
+//        return StreamSupport
+//            .stream(addressSearchRepository.search(queryStringQuery(query)).spliterator(), false)
+//            .collect(Collectors.toList());
+
 }
