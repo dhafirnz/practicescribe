@@ -18,7 +18,8 @@ angular.module('practiceScribeApp')
                 if ($rootScope.previousStateName === 'register') {
                     $state.go('home');
                 } else {
-                    $rootScope.back();
+                    //$rootScope.back();
+                    $state.go('modules');
                 }
             }).catch(function () {
                 $scope.authenticationError = true;
