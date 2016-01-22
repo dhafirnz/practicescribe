@@ -117,6 +117,10 @@ angular.module('practiceScribeApp', ['LocalStorageModule', 'tmh.dynamicLocale', 
         tmhDynamicLocaleProvider.storageKey('NG_TRANSLATE_LANG_KEY');
         
     })
+    // Initialize material design
+    .config(function () {
+        $.material.init();
+    })
     // jhipster-needle-angularjs-add-config JHipster will add new application configuration
     .config(['$urlMatcherFactoryProvider', function($urlMatcherFactory) {
         $urlMatcherFactory.type('boolean', {

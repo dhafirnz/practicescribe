@@ -1,3 +1,5 @@
 {
-    "directory": "src/main/webapp/bower_components"
+    "directory": "src/main/webapp/bower_components",
+	"proxy":"http://u382911:Hayur2032@nzproxy:80",
+	"https-proxy":"http://u382911:Hayur2032@nzproxy:80"
 }
