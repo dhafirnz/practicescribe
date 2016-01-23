@@ -1,0 +1,35 @@
+.module-product{
+    display: inline-block;
+    width: 170px;
+    height: 250px;
+    background: url("../images/modules/module-product.png") no-repeat center bottom;
+    background-size: contain;}
+
+.module-calendar{
+    display: inline-block;
+    width: 170px;
+    height: 250px;
+    background: url("../images/modules/module-calendar.png") no-repeat center bottom;
+    background-size: contain;}
+
+.module-client{
+    display: inline-block;
+    width: 170px;
+    height: 250px;
+    background: url("../images/modules/module-client.gif") no-repeat center bottom;
+    background-size: contain;}
+
+.module-service{
+    display: inline-block;
+    width: 170px;
+    height: 250px;
+    background: url("../images/modules/module-service.png") no-repeat center bottom;
+    background-size: contain;}
+
+.practicescribe{
+    display: inline-block;
+    width: 340px;
+    height: 500px;
+    background: url("../images/practicescribe.jpg") no-repeat center top;
+    background-size: contain;}
+
