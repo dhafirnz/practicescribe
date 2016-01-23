@@ -1,6 +1,6 @@
 {
     "main": {
-        "title": "Welcome, Dhafir Moussa!",
+        "title": "Welcome, Practice Scriber!",
         "subtitle": "This is your homepage",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."

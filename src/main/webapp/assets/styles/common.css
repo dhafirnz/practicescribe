@@ -28,8 +28,15 @@
 
 .practicescribe{
     display: inline-block;
-    width: 340px;
+    width: 540px;
     height: 500px;
     background: url("../images/practicescribe.jpg") no-repeat center top;
+    background-size: contain;}
+
+.threepoints-logo{
+    display: inline-block;
+    width: 320px;
+    height: 60px;
+    background: url("../images/threepoints-logo.png") no-repeat center ;
     background-size: contain;}
 
